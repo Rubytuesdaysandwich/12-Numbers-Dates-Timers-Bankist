@@ -251,7 +251,9 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-
+//!==============
+//------ Converting and Checking Numbers
+/*
 console.log(23 === 23.0);
 //base 10 - 0 to 9. 1/10 = 0.1.1 3/10  = 3.333333
 //binary base 2- 0 1
@@ -266,7 +268,7 @@ console.log(Number.parseInt('30px', 10));
 console.log(Number.parseInt('e23', 10));
 
 console.log(Number.parseInt('2.5rem'));
-console.log(Number.parseFloat('2.5rem'));
+console.log(Number.parseFloat('2.5rem')); //read the number out of the string
 // console.log(parseFloat('2.5rem'))//older code
 
 console.log(Number.isNaN(20));
@@ -278,3 +280,6 @@ console.log(Number.isFinite(20));
 console.log(Number.isFinite('20'));
 console.log(Number.isFinite(+'20x'));
 console.log(Number.isFinite(23 / 0));
+*
+//------ Converting and Checking Numbers
+//!==============
