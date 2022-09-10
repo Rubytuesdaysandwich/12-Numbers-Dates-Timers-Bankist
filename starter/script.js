@@ -252,7 +252,8 @@ btnLogin.addEventListener('click', function (e) {
     // console.log(locale);
 
     labelDate.textContent = new Intl.DateTimeFormat(
-      currentAccount.locale,
+      currentAccount.locale, //gets the user local time based on the browser
+
       options
     ).format(now);
 
@@ -567,6 +568,8 @@ console.log(future);
 //--------- creating dates
 //!=============
 //------------operations with dates
+/*
+
 const future = new Date(2037, 10, 19, 15, 23);
 console.log(+future);
 
@@ -574,5 +577,23 @@ const calcDaysPassed = (date1, date2) =>
   (date2 - date1) / (1000 * 60 * 60 * 24);
 const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
 console.log(days1);
-
+*/
 //------------operations with dates
+const num = 38884764.23;
+
+const options = {
+  style: 'currency', //currency unit percents
+  // unit: 'celsius',
+  currency: 'EUR',
+  //use grouping false
+};
+console.log('US:', new Intl.NumberFormat('en-US', options).format(num));
+
+console.log('Germany:', new Intl.NumberFormat('de-DE', options).format(num));
+
+console.log('Syria:', new Intl.NumberFormat('ar-SY', options).format(num));
+
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language, options).format(num)
+);
