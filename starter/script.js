@@ -579,6 +579,7 @@ const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
 console.log(days1);
 */
 //------------operations with dates
+/*
 const num = 38884764.23;
 
 const options = {
@@ -597,3 +598,23 @@ console.log(
   navigator.language,
   new Intl.NumberFormat(navigator.language, options).format(num)
 );
+*/
+//--------------operations with dates end
+//!==========================
+//---------------- Timers: setTimeout and setInterval
+//asynchronous javascript
+//``template literals
+//everything after the the 3000 is arguments to the function olives and spinach
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} AND ${ing2}🍕`),
+  3000,
+  // 'olives',
+  // 'spinach' //able to be called by the function
+  ...ingredients //using spread operator to get the list of ingredients from the array
+);
+console.log('waiting...');
+// clear the timer with the pizzaTimer variable
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+//---------------- Timers: setTimeout and setInterval
+//!==========================
