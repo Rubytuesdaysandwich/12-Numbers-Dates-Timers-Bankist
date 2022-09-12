@@ -118,7 +118,7 @@ const displayMovements = function (acc, sort = false) {
 
     const date = new Date(acc.movementsDates[i]);
     const displayDate = formatMovementDate(date, acc.locale);
-
+    //formating the currency type in the aplication dollars and pounds
     const formattedMov = formatCur(mov, acc.locale, acc.currency);
 
     const html = `
