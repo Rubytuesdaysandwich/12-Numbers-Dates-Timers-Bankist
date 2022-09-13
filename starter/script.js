@@ -602,9 +602,11 @@ console.log(
 //--------------operations with dates end
 //!==========================
 //---------------- Timers: setTimeout and setInterval
+//Set timeout
 //asynchronous javascript
 //``template literals
 //everything after the the 3000 is arguments to the function olives and spinach
+/*
 const ingredients = ['olives', 'spinach'];
 const pizzaTimer = setTimeout(
   (ing1, ing2) => console.log(`Here is your pizza with ${ing1} AND ${ing2}🍕`),
@@ -616,5 +618,30 @@ const pizzaTimer = setTimeout(
 console.log('waiting...');
 // clear the timer with the pizzaTimer variable
 if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// end setTimeout
+// setInterval
+// creating a new time every 3 seconds
+
+const interTimerOptions = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  // weekday: 'long',
+};
+
+setInterval(function () {
+  const now = new Date();
+  var HourMinSec =
+    now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+  // console.log(now);
+  console.log(HourMinSec);
+}, 1000);
+*/
 //---------------- Timers: setTimeout and setInterval
 //!==========================
+//implementing a countdown timer
+
+//implementing a countdown timer
