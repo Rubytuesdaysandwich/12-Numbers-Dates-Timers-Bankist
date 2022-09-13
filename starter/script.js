@@ -185,10 +185,12 @@ const updateUI = function (acc) {
 };
 
 const startLogOutTimer = function () {
+  //use a timeinterval to countdown to log out
+  //when it reaches 0 log out the user
   const tick = function () {
-    const min = String(Math.trunc(time / 60)).padStart(2, 0);
-    const sec = String(time % 60).padStart(2, 0);
-
+    const min = String(Math.trunc(time / 60)).padStart(2, 0); //get the minutes
+    const sec = String(time % 60).padStart(2, 0); //get the seconds
+    //using remainder operator 100 by 60 equal 40
     // In each call, print the remaining time to UI
     labelTimer.textContent = `${min}:${sec}`;
 
@@ -200,6 +202,7 @@ const startLogOutTimer = function () {
     }
 
     // Decrease 1s
+    //positioning here is important
     time--;
   };
 
@@ -207,6 +210,8 @@ const startLogOutTimer = function () {
   let time = 120;
 
   // Call the timer every second
+  //allows the function to avoid the lag
+  // allows the function to be called immediately
   tick();
   const timer = setInterval(tick, 1000);
 
